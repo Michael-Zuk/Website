@@ -193,6 +193,14 @@ th, td
   column-gap: 50px;
   padding: 10px;
 }
+.features-list li
+{
+  padding-right: 50px;
+  list-style: none;
+
+  
+}
+
 
 
 
