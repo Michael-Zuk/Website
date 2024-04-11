@@ -24,6 +24,10 @@ header img
   margin-right: 20px;
   border-radius: 10px;
 }
+#collage_project
+{
+  float: right;
+}
 /* CSS for nav bar */
 nav ul {
   list-style-type: none;
