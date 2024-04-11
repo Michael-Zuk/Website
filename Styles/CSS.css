@@ -1,7 +1,7 @@
 body {
   background-color: #121212;
   color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -31,8 +31,9 @@ nav ul {
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin-right: 20px;
+  position: relative; 
 }
 
 nav ul li a {
@@ -45,55 +46,101 @@ nav ul li a:hover {
   color: #66c0f4;
 }
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown button */
+.dropbtn {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 /* Home page grid*/
 .featured-games {
   padding: 20px;
-
-  .grid {
-    max-width: 1600px;
-    padding-left: 8%;
-    padding-right: 8%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 8px;
-    transition: grid-template-columns 0.5s ease;
-    cursor: pointer;
-  }
-  
-  .grid:has(.left:hover) {
-    grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-  }
-  .grid:has(.centerleft:hover) {
-    grid-template-columns: 0.2fr 2fr 0.2fr 0.2fr 0.2fr;
-  }
-  .grid:has(.center:hover) {
-    grid-template-columns: 0.2fr 0.2fr 2fr 0.2fr 0.2fr;
-  }
-  .grid:has(.centerright:hover) {
-    grid-template-columns: 0.2fr 0.2fr 0.2fr 2fr 0.2fr;
-  }
-  .grid:has(.right:hover) {
-  grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 2fr;
-  }
-  
-  
-  img {
-    border-radius: 15px;
-    width: 100%;
-    height: 600px ;
-    display: block;
-    object-fit: cover; 
-
-  }
 }
-/* Footer CSS*/
-footer {
-  background-color:gray;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  bottom: 0;
+
+.featured-games .grid {
+  max-width: 84%;
+  padding-left: 8%;
+  padding-right: 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  transition: grid-template-columns 0.5s ease;
+  cursor: pointer;
+}
+
+.featured-games .grid:has(.left:hover) {
+  grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+}
+
+.featured-games .grid:has(.centerleft:hover) {
+  grid-template-columns: 0.2fr 2fr 0.2fr 0.2fr 0.2fr;
+}
+
+.featured-games .grid:has(.center:hover) {
+  grid-template-columns: 0.2fr 0.2fr 2fr 0.2fr 0.2fr;
+}
+
+.featured-games .grid:has(.centerright:hover) {
+  grid-template-columns: 0.2fr 0.2fr 0.2fr 2fr 0.2fr;
+}
+
+.featured-games .grid:has(.right:hover) {
+  grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 2fr;
+}
+
+.featured-games img {
+  border-radius: 15px;
   width: 100%;
+  height: 600px;
+  display: block;
+  object-fit: cover; 
+}
+
+/* Footer CSS*/
+
+footer {
+  background-image: url(../Images/footer.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  bottom: 0;
   text-align: center;
+  width: 100%;
   font-size: 14px;
   color: #ffffff;
 }
@@ -103,6 +150,7 @@ iframe
   align-items: center;
   width: 100%;
   height: 500px;
+  border: none;
 
 }
 .about
@@ -126,34 +174,25 @@ iframe
   max-width: 100%;
   height: auto;
 }
-
-/* This is used for Contact Form*/
-label {
-  float: left;
-  width: 112px;
-  padding-right: 10px;
-  text-align: right;
+table
+{
+  margin: auto;
+  border-collapse: collapse;
 }
-input {
-  margin-left: 1em; 
-  margin-bottom: .5em; 
-  width: 220px;
-}
-#button, #reset {
-  margin-top: .5em;
-  width: 8em;
-  background-color:orange;
-  border: 2px solid black;
-}
-input[type="checkbox"] {width: 15px;}
-
-#button {
-margin-left: 138px;
+th, td
+{
+  padding: .2em .7em;
+  text-align: left;
 }
 
-#reset {
-margin-left: 82px;}
-input[type="radio"] {width: 10px;}
+#columns
+{
+  margin-top: 50px;
+  column-count: 3;
+  column-rule: 1px solid white;
+  column-gap: 50px;
+  padding: 10px;
+}
 
 
 

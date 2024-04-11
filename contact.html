@@ -2,12 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width-divice-width, inital-scale-1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Taplate Page">
+    <meta name="keywords" content="Section,Article,Footer" >
     <title>Games Review</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo.png">
     <link rel="stylesheet" href="Styles/CSS.css">
+    <style>
+label {
+  float: left;
+  width: 112px;
+  padding-right: 10px;
+  text-align: right;
+}
+input {
+  margin-left: 1em; 
+  margin-bottom: .5em; 
+  width: 220px;
+}
+#button, #reset {
+  margin-top: .5em;
+  width: 8em;
+  background-color:orange;
+  border: 2px solid black;
+}
+input[type="checkbox"] {width: 15px;}
+
+#button 
+{
+  margin-left: 138px;
+}
+
+#reset 
+{
+  margin-left: 82px;}
+  input[type="radio"] {width: 10px;
+}
+#map
+{
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 1000px;
+}
+    </style>
 </head>
-<body>
+<body >
+    <div id="top"></div>
     <header>
+
         <img src="Images/logo.png" alt="Logo">
         <h1>Game Night</h1>
         <!-- Nav Area -->
@@ -15,42 +58,72 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Featured Games</a>
+                    <div class="dropdown-content">
+                        <a href="cod_home_page.html">MW 3</a>
+                        <a href="destiny_home_page.html">Destiny 2</a>
+                        <a href="palworld_home_page.html">Palworld</a>
+                        <a href="r6_home_page.html">Rainbow 6</a>
+                        <a href="satisfactory_home_page.html">Satisfactory</a>
+                    </div>
+                </li>
+                <li><a href="#bottom">Scroll to Bottom</a></li>
             </ul>
         </nav>
     </header>
 <main>
-<br>
-<label for="first_name">First name: <span class="required">*</span></label>
-<input type="text" name="first_name" id="first_name" autofocus required><br> <label for="last_name">Last name: <span class="required">*</span></label>
-<input type="text" name="last_name" id="last_name" required><br> <label for="email">Email:<span class="required">*</span></label>
-<input type="email" name="email" id="email" required placeholder="johndoe@example.com"> <br>
-    <br>
-<label for="gender">Gender:</label>
-<input type="radio" id="gender" name="gender" value="male"> Male
-<input type="radio" id="gender" name="gender" value="female"> Female
-<input type="radio" id="gender" name="gender" value="other" checked> Other <br>
+    <form action="http://foo.com/" method="get">
 
-<!-- Example checkbox control -->
-<label for="message">Where did you hear about us:</label>
-<fieldset style="max-width: 500px;">
-  <input type="checkbox" id="internet" name="internet" value="internet" checked> Internet <br>
-  <input type="checkbox" class="marginl" id="hearr" name="paper" value="paper"> Newspaper <br>
-  <input type="checkbox" class="marginl" id="hear" name="friend" value="friend"> Friend<br>
-  <input type="checkbox" class="marginl" id="hear" name="add" value="add"> Others <br>
-</fieldset>
-<br>
-<!-- Example free format text area control -->
-<label for="message">Query:</label>
-<textarea cols="40" rows="6" id="message" name="message" placeholder="Your message must be less than 200 characters" data-maxlength=""></textarea>
-<input type="submit" name="submit" id="button" value="Submit">
-<input type="reset" name="reset" id="reset">
+
+    <br>
+    <label for="first_name">First name: <span class="required">*</span></label>
+    <input type="text" name="first_name" id="first_name" autofocus required><br> <label for="last_name">Last name: <span class="required">*</span></label>
+    <input type="text" name="last_name" id="last_name" required><br> <label for="email">Email:<span class="required">*</span></label>
+    <input type="email" name="email" id="email" required placeholder="johndoe@example.com"> <br>
+        <br>
+
+    <label for="gender_male">Gender:</label>
+    <input type="radio" id="gender_male" name="gender" value="male"> Male
+    <input type="radio" id="gender_female" name="gender" value="female"> Female
+    <input type="radio" id="gender_other" name="gender" value="other" checked> Other
+        <br>
+    
+    <label for="message">Where did you hear about us:</label>
+    <fieldset style="max-width: 500px;">
+    <input type="checkbox" id="internet" name="internet" value="internet" checked> Internet <br>
+    <input type="checkbox" class="marginl" id="hearr" name="paper" value="paper"> Newspaper <br>
+    <input type="checkbox" class="marginl" id="friend" name="friend" value="friend"> Friend <br>
+    <input type="checkbox" class="marginl" id="addGame" name="addGame" value="addGame"> Request a Game <br>
+    <input type="checkbox" class="marginl" id="add" name="add" value="add"> Others <br>
+    </fieldset>
+    <br>
+
+    <label for="message">Query:</label>
+    <textarea cols="40" rows="6" id="message" name="message" placeholder="Your message must be less than 200 characters" data-maxlength=""></textarea>
+    <br>
+    <input type="submit" name="submit" id="button" value="Submit">
+    <input type="reset" name="reset" id="reset">
+
+</form>
+
+<section id="map">
+    <h2>Map Section</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18640.081073992522!2d-8.501329559023038!3d54.268398256791734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ee9b5677caee9%3A0xa00c7a997317380!2sSligo!5e0!3m2!1sen!2sie!4v1712754811647!5m2!1sen!2sie" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
 
 </main>
 
     <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#top">Scroll to Top</a></li>
+            </ul>
+        </nav>
         <p>&copy; 2024 Games Review</p>
     </footer>
+    <div id="bottom"></div>
 </body>
 </html>

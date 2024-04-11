@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width-divice-width, inital-scale-1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Home Page">
+    <meta name="keywords" content="Home Page,Contact,Featured Games,callofduty,destiny2,palworld,rainbow-six,satisfactory" >
     <title>Games Review</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo.png"> 
     <link rel="stylesheet" href="Styles/CSS.css">
 </head>
 <body>
+    <div id="top"></div>
     <header>
         <img src="Images/logo.png" alt="Logo">
         <h1>Game Night</h1>
@@ -15,15 +20,23 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Featured Games</a>
+                    <div class="dropdown-content">
+                        <a href="cod_home_page.html">MW 3</a>
+                        <a href="destiny_home_page.html">Destiny 2</a>
+                        <a href="palworld_home_page.html">Palworld</a>
+                        <a href="r6_home_page.html">Rainbow 6</a>
+                        <a href="satisfactory_home_page.html">Satisfactory</a>
+                    </div>
+                </li>
+                <li><a href="#bottom">Scroll to Bottom</a></li>
             </ul>
         </nav>
     </header>
 <main>
     <section class="featured-games">
         <h2 style="text-align: center;">Featured Games</h2>
-        <!-- featured games here -->
         <div class="grid">
             <div class="left">
                 <a href="cod_home_page.html">
@@ -41,12 +54,12 @@
                 </a>
             </div>
             <div class="centerright">
-                <a href="">
-                    <img src="Images/R6_1080p.png" alt="Image 2">
+                <a href="r6_home_page.html">
+                    <img src="Images/R6.jpg" alt="Image 2">
                 </a>
             </div>
             <div class="right">
-                <a href="">
+                <a href="satisfactory_home_page.html">
                     <img src="Images/satisfactory_720p.jpg" alt="Image 3">
                 </a>
             </div>
@@ -54,8 +67,16 @@
     </section>
 </main>
 
-    <footer>
-        <p>&copy; 2024 Games Review</p>
-    </footer>
+<footer>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#top">Scroll to Top</a></li>
+        </ul>
+    </nav>
+    <p>&copy; 2024 Games Review</p>
+</footer>
+<div id="bottom"></div>
 </body>
 </html>
